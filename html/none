@@ -1,0 +1,21 @@
+[0;1;32m●[0m dnsmasq.service - dnsmasq - A lightweight DHCP and caching DNS server
+   Loaded: loaded (/lib/systemd/system/dnsmasq.service; enabled; vendor preset: enabled)
+   Active: [0;1;32mactive (running)[0m since Tue 2020-03-31 11:25:24 EDT; 7s ago
+  Process: 9785 ExecStartPre=/usr/sbin/dnsmasq --test (code=exited, status=0/SUCCESS)
+  Process: 9786 ExecStart=/etc/init.d/dnsmasq systemd-exec (code=exited, status=0/SUCCESS)
+  Process: 9795 ExecStartPost=/etc/init.d/dnsmasq systemd-start-resolvconf (code=exited, status=0/SUCCESS)
+ Main PID: 9794 (dnsmasq)
+   Memory: 632.0K
+   CGroup: /system.slice/dnsmasq.service
+           └─9794 /usr/sbin/dnsmasq -x /run/dnsmasq/dnsmasq.pid -u dnsmasq -r /run/dnsmasq/resolv.conf -7 /etc/dnsmasq.d,.dpkg-dist,.dpkg-old,.dpkg-new --local-service --trust-anchor=.,20326,8,2,e06d44b80b8f1d39a95c0b0d7c65d08458e880409bbc683457104237c7f8ec8d
+
+Mar 31 11:25:23 raspberrypi systemd[1]: Starting dnsmasq - A lightweight DHCP and caching DNS server...
+Mar 31 11:25:23 raspberrypi dnsmasq[9785]: dnsmasq: syntax check OK.
+Mar 31 11:25:23 raspberrypi dnsmasq[9794]: started, version 2.80 cachesize 1000
+Mar 31 11:25:23 raspberrypi dnsmasq[9794]: DNS service limited to local subnets
+Mar 31 11:25:23 raspberrypi dnsmasq[9794]: compile time options: IPv6 GNU-getopt DBus i18n IDN DHCP DHCPv6 no-Lua TFTP conntrack ipset auth DNSSEC loop-detect inotify dumpfile
+Mar 31 11:25:23 raspberrypi dnsmasq[9794]: [0;1;39m[0;1;31m[0;1;39mwarning: ignoring resolv-file flag because no-resolv is set[0m
+Mar 31 11:25:23 raspberrypi dnsmasq[9794]: using nameserver 8.8.8.8#53
+Mar 31 11:25:23 raspberrypi dnsmasq[9794]: read /etc/hosts - 5 addresses
+Mar 31 11:25:24 raspberrypi dnsmasq[9795]: Too few arguments.
+Mar 31 11:25:24 raspberrypi systemd[1]: Started dnsmasq - A lightweight DHCP and caching DNS server.
